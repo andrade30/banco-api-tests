@@ -28,7 +28,7 @@ describe('Transferências', () => {
             const bodyTransferencias = { ...postTransferencias }
             bodyTransferencias.valor = 8;
 
-            const response = await request('http://localhost:3000')
+            const response = await request(process.env.BASE_URL)
                 .post('/transferencias')
                 .set('Content-Type', 'application/json')
                 .set('Authorization', `Bearer ${token}`)
