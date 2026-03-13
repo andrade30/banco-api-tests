@@ -44,9 +44,6 @@ describe('Transferências', () => {
                 .get('/transferencias/11')
                 .set('Authorization', `Bearer ${token}`)
 
-            console.log(response.status)
-            console.log(response.body)
-
             expect(response.status).to.equal(200)
             expect(response.body.id).to.equal(11)
             expect(response.body.id).to.be.a('number')
